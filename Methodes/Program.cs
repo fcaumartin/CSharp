@@ -8,14 +8,22 @@ namespace Methodes
 {
     class Program
     {
-        static int fact (int nb)
+        //static int fact (int nb)
+        //{
+        //    int resultat = 1;
+        //    for (int i = 2; i <= nb; i++)
+        //    {
+        //        resultat = resultat * i;
+        //    }
+        //    return resultat;
+        //}
+
+        static int fact(int nb)
         {
-            int resultat = 1;
-            for (int i = 1; i <= nb; i++)
-            {
-                resultat = resultat * i;
-            }
-            return resultat;
+            if (nb == 0)
+                return 1;
+            else
+                return nb * fact(nb - 1);
         }
 
         static void Main(string[] args)
